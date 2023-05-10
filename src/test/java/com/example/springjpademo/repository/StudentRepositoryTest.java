@@ -63,4 +63,15 @@ class StudentRepositoryTest {
         List<Student> studentList = studentRepository.findAll();
         System.out.println("student list: " + studentList);
     }
+
+    @Test
+    public void printStudentFindByEmailAddressContaining() {
+        System.out.println("Student: " + studentRepository.findByEmailAddressContaining("dmnghia"));
+    }
+
+    @Test
+    public void updateStudentFirstNameByEmailIdTest() {
+        studentRepository.updateStudentFirstNameByEmailId("Nguyen Tien",
+                "datnt@gmail.com");
+    }
 }
